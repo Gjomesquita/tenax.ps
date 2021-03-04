@@ -29,12 +29,12 @@ public class ServidorController {
 	}
 	
 	@PostMapping("/json")
-	public Servidor criaServidorJson(@RequestBody Servidor servidor) {
+	public Servidor criaServidorPorJson(@RequestBody Servidor servidor) {
 		return servidorService.criarServidor(servidor);
 	}
 	
 	@PostMapping()
-	public Servidor criaServidor(@RequestParam("nome") String nome, @RequestParam("descricao") String descricao) {
+	public Servidor criaServidorPorParametros(@RequestParam("nome") String nome, @RequestParam("descricao") String descricao) {
 		Servidor servidor = new Servidor(null, nome, descricao);
 		return servidorService.criarServidor(servidor);
 	}
