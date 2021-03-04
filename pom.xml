@@ -8,12 +8,12 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>tenax.PS</groupId>
+	<groupId>tenax.ps</groupId>
 	<artifactId>tenax</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>Tenax</name>
 	<description>Projeto de processo seletivo Tenax</description>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<properties>
 		<java.version>11</java.version>
