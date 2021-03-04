@@ -47,4 +47,10 @@ public class Servidor {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public Servidor(Long id, String nome, String descricao) {
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+	}
 }

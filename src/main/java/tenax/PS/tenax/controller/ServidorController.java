@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import tenax.PS.tenax.model.Servidor;
@@ -27,8 +28,14 @@ public class ServidorController {
 		return servidorService.getTodosServidores();
 	}
 	
+	@PostMapping("/json")
+	public Servidor criaServidorJson(@RequestBody Servidor servidor) {
+		return servidorService.criarServidor(servidor);
+	}
+	
 	@PostMapping()
-	public Servidor criaServidor(@RequestBody Servidor servidor) {
+	public Servidor criaServidor(@RequestParam("nome") String nome, @RequestParam("descricao") String descricao) {
+		Servidor servidor = new Servidor(null, nome, descricao);
 		return servidorService.criarServidor(servidor);
 	}
 	
