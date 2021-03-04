@@ -1,0 +1,17 @@
+Referência de endpoints:
+
+Caminho Tomcat default para API: http://localhost:8080/tenax
+
+/servidor
+	GET - retornaTodosServidores
+	GET /contagem - retornaContagemDeServidores
+	GET /filtrado/nome/?nome={nome} - retornaServidorFiltradoPeloNome (Retorna servidor com nome exato escrito)
+	GET /filtrado/descricao/?descricao={descricao} - retornaServidoresFiltradosPelaDescricao (buscando pela aparição de input em qualquer lugar da descrição)
+	GET /{idServidor} - retornaServidorPeloId
+	
+	POST /?nome={nome}&descricao={descricao} - criaServidorPorParametros
+	POST /json - criaServidorPorJson (Passar json no body da requisição)
+	
+	PUT alteraServidor (Passar json do servidor com id no body da requisição)	
+	
+	DELETE /{idServidor} excluiServidor
