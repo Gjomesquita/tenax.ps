@@ -28,6 +28,21 @@ public class ServidorController {
 		return servidorService.getTodosServidores();
 	}
 	
+	@GetMapping("/filtrado/nome")
+	public Servidor retornaServidorFiltradoPeloNome(@RequestParam("nome") String nome) {
+		return servidorService.getServidorFiltradoPeloNome(nome);
+	}
+	
+	@GetMapping("/filtrado/descricao")
+	public List<Servidor> retornaServidoresFiltradosPelaDescricao(@RequestParam("descricao") String descricao) {
+		return servidorService.getServidoresFiltradosPelaDescricao(descricao);
+	}
+	
+	@GetMapping("{idServidor}")
+	public Servidor retornaServidorPeloId(@PathVariable Long idServidor) {
+		return servidorService.getServidorPeloId(idServidor);
+	}
+	
 	@PostMapping("/json")
 	public Servidor criaServidorPorJson(@RequestBody Servidor servidor) {
 		return servidorService.criarServidor(servidor);
