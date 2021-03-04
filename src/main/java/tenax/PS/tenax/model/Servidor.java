@@ -48,6 +48,8 @@ public class Servidor {
 		this.descricao = descricao;
 	}
 	
+	public Servidor() {}
+	
 	public Servidor(Long id, String nome, String descricao) {
 		this.id = id;
 		this.nome = nome;
